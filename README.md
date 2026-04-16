@@ -3,7 +3,7 @@
 ## Project Overview
 
 This is a **production-grade, end-to-end data engineering and analysis project** designed to support strategic policy decisions for the Moroccan Ministry of Territorial Planning, Urbanization, Housing, and Urban Policy.
-
+![image](image.png)
 ### Project Objectives
 
 1. **Data Integration**: Consolidate urban development data from multiple sources
@@ -290,77 +290,7 @@ Detailed documentation available in `docs/`:
 
 ---
 
-## Interview Preparation Notes
-
-### Talking Points for Ministry Interview
-
-1. **Problem Statement**
-   - "Moroccan local administrations need data-driven insights for urban planning"
-   - "Current approach: manual analysis → inefficient, error-prone"
-
-2. **Solution Architecture**
-   - "Built end-to-end data platform with automated ETL and analytics"
-   - "Quality gates ensure data integrity at each stage"
-
-3. **Key Insights Delivered**
-   - Regional development disparities
-   - Housing market bottlenecks
-   - Infrastructure readiness assessment
-   - Population growth forecasts
-
-4. **Business Impact**
-   - Supports investment prioritization
-   - Enables evidence-based policy making
-   - Reduces analysis cycle time from weeks to minutes
-
-5. **Technical Highlights**
-   - Scalable architecture (can handle millions of records)
-   - Automated data validation and quality checks
-   - Interactive dashboard for non-technical stakeholders
-   - Reproducible, version-controlled analysis
-
----
-
-## Troubleshooting
-
-### Issue: Database not found
-```bash
-# Solution: Run pipeline to create database
-python run_pipeline.py
-```
-
-### Issue: Import errors
-```bash
-# Solution: Ensure virtual environment is activated and dependencies installed
-pip install -r requirements.txt --force-reinstall
-```
-
-### Issue: Dashboard won't start
-```bash
-# Solution: Check if port 8050 is available
-python dashboards/dashboard.py --port 8051
-```
-
----
-
-## Future Enhancements
-
-- [ ] Real-time data integration from government APIs
-- [ ] Machine learning classification (region development stages)
-- [ ] Geospatial analysis with mapping
-- [ ] Web API for external consumption
-- [ ] Advanced forecasting (ARIMA, Prophet)
-- [ ] Cost-benefit analysis for interventions
-
----
-
-## Contact & Support
-
-For questions about this project, refer to the documentation or code comments.
-
----
-
 **Version**: 1.0.0  
 **Last Updated**: April 2024  
-**Prepared For**: Ministry of Territorial Planning, Urbanization, Housing & Urban Policy
+**Developed by**: Abdelilah HSSASSA (Vibe coded)
 
