@@ -1,0 +1,30 @@
+*.pyc
+__pycache__/
+.pytest_cache/
+.egg-info/
+dist/
+build/
+.DS_Store
+*.log
+.env
+venv/
+env/
+.vscode/
+.idea/
+*.ipynb_checkpoints/
+
+# Data and logs
+data/raw/*
+data/processed/*
+data/warehouse/*.db
+logs/*.log
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

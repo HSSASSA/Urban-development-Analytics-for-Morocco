@@ -1,0 +1,45 @@
+project:
+  name: "Urban Development Analytics - Morocco"
+  version: "1.0.0"
+  description: "End-to-end data engineering and analysis for urban development policy"
+
+data:
+  raw_path: "./data/raw"
+  processed_path: "./data/processed"
+  warehouse_path: "./data/warehouse"
+  database: "urban_analytics.db"
+
+regions:
+  - Casablanca-Settat
+  - Fès-Meknès
+  - Marrakech-Safi
+  - Rabat-Salé-Kénitra
+  - Tanger-Tétouan-Al Hoceïma
+  - Tlemcen
+  - Drâa-Tafilalet
+  - Souss-Massa
+  - Oriental
+
+pipeline:
+  batch_size: 10000
+  validation_enabled: true
+  quality_checks:
+    - schema_validation
+    - null_checks
+    - duplicate_checks
+    - outlier_detection
+    - referential_integrity
+
+analysis:
+  forecasting_horizon: 5  # years
+  confidence_interval: 0.95
+  test_size: 0.2
+
+visualization:
+  theme: "plotly_dark"
+  default_colors:
+    - "#1f77b4"
+    - "#ff7f0e"
+    - "#2ca02c"
+    - "#d62728"
+    - "#9467bd"

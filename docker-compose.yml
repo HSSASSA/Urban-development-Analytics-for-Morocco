@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  pipeline:
+    build: .
+    container_name: urban-analytics-pipeline
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+    environment:
+      - LOG_LEVEL=INFO
+      - DB_PATH=./data/warehouse/urban_analytics.db
+    command: python run_pipeline.py
+
+  dashboard:
+    build: .
+    container_name: urban-analytics-dashboard
+    ports:
+      - "8050:8050"
+    volumes:
+      - ./data:/app/data
+    environment:
+      - LOG_LEVEL=INFO
+    command: python dashboards/dashboard.py
+    depends_on:
+      - pipeline
+
+  # Optional: PostgreSQL for production
+  postgres:
+    image: postgres:15-alpine
+    container_name: urban-analytics-postgres
+    environment:
+      POSTGRES_DB: urban_analytics
+      POSTGRES_USER: analyst
+      POSTGRES_PASSWORD: secure_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    # Uncomment to enable
+    # profiles:
+    #   - production
+
+volumes:
+  postgres_data:

@@ -1,0 +1,18 @@
+urban-development-analytics/
+├── data/                          # Data storage
+│   ├── raw/                       # Input data
+│   ├── processed/                 # Cleaned CSV exports
+│   └── warehouse/                 # SQLite database
+├── src/                           # Source code
+│   ├── pipeline/                  # ETL implementation
+│   ├── analysis/                  # Analytics & ML models
+│   └── utils/                     # Shared utilities
+├── dashboards/                    # Interactive visualizations
+├── tests/                         # Unit tests
+├── docs/                          # Documentation
+├── run_pipeline.py                # Main execution script
+├── README.md                      # Project guide
+├── INTERVIEW_GUIDE.md             # Interview Q&As
+├── DEPLOYMENT.md                  # Cloud deployment
+├── requirements.txt               # Dependencies
+└── Dockerfile/docker-compose.yml  # Container setup
